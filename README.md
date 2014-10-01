@@ -4,7 +4,7 @@ GPSDetector
 Features
 --------
 
-- Check if your device has GPS enabled or not.
+- Check if your android device has GPS enabled or not.
 - Tested (and working) on Android 4.4 KitKat (Nexus 5)
 - This fork is only tested with cordova 3.6.3-0.2.13, but I'm sure it's fine!
 
