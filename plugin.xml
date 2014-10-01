@@ -4,34 +4,30 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="com.butterflyeffect.GPSDetector"
 	version="0.0.1">
-      
-    <name>GPSDector</name>
+	<name>GPSDector</name>
 	<description>Is the device GPS hardware on or off?</description>
 	<author>Bastien L</author>
 
 	<engines>
-	    <engine name="cordova" version=">=2.9" />
+		<engine name="cordova" version=">=2.9" />
 	</engines>
 
-	<js-module src="assets/www/js/GPSDector.js" name="GPSDetector">
-        <clobbers target="window.GPSDetector" />
-    </js-module>
+	<js-module src="GPSDector.js" name="GPSDetector">
+		<clobbers target="window.GPSDetector" />
+	</js-module>
 
-    <!-- android -->
-    <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="GPSDetector">
-                <param name="android-package" value="com.butterflyeffect.GPSDetector"/>
-            </feature>
-        </config-file>
-		<source-file src="src/com/butterflyeffect/GPSDetector.java" target-dir="src/com/butterflyeffect/" />
-
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="GPSDetector">
+				<param name="android-package" value="com.butterflyeffect.GPSDetector"/>
+			</feature>
+		</config-file>
+		<source-file src="GPSDetector.java" target-dir="src/com/butterflyeffect/" />
 
 		<config-file target="AndroidManifest.xml" parent="/manifest">
-            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-            <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
-        </config-file>
-     </platform>
-     
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+			<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+		</config-file>
+	 </platform>
 </plugin>
