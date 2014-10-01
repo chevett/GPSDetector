@@ -6,7 +6,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 		<title>GPS Detector</title>
 		<script type="text/javascript" charset="utf-8" src="./js/cordova.js"></script>
-		<script type="text/javascript" charset="utf-8" src="./js/gpsDetectionPlugin.js"></script>
+		<script type="text/javascript" charset="utf-8" src="./js/GPSDetector.js"></script>
 	</head>
 	<body>
 		<h1>GPS Detector</h1>
@@ -18,12 +18,10 @@
 		
 		function onDeviceReady() {
 		
-			gpsDetect = cordova.require('cordova/plugin/gpsDetectionPlugin');
-		
 			var checkButton = document.getElementById("check");
 			
 			checkButton.onclick = function() {
-				gpsDetect.checkGPS(onGPSSuccess, onGPSError);
+				Window.GPSDector(onGPSSuccess, onGPSError);
 			} 
 			
 			function onGPSSuccess(on) {

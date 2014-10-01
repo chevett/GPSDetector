@@ -1,4 +1,4 @@
-package com.butterflyeffect.plugins;
+package com.butterflyeffect;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -9,7 +9,7 @@ import org.json.JSONArray;
 import android.location.LocationManager;
 import android.provider.Settings;
 
-public class GPSDetectionPlugin extends CordovaPlugin {
+public class GPSDetector extends CordovaPlugin {
 
 	@Override
     public boolean execute(String action, final JSONArray args, CallbackContext callbackContext) {
